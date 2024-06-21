@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Với Post: https://abc.com/-->
+<!--Với Get: https://abc.com/?name=Vanh-->
+<!--Get: thông tin được hiển thị trên URL. Post thì không-->
+<!--Get: không sử dụng để gửi các thông tin nhạy cảm ví dụ mật khẩu. Post được dùng để gửi -->
+<!--Vì URL giới hạn nên dữ liệu gửi đi bởi GET sẽ có giới hạn. Còn POST thi không-->
+<!--Vì trên web không thể hiểu bất cứ dữ liệu gì ngoài văn bản nên get chỉ gửi được dạng text(văn bản). Post thì gửi được mọi kiểu dữ liệu-->
+<!--Get được bookmark nên truy xuất lần 2 nhanh hơn còn post thì không-->
+<!--Tác dụng của name trong ô input là dùng để gửi dữ liệu đi kèm với form vì dữ liệu đucợ truy xuất theo name=value-->
+<form action="https://abc.com" method="get">
+    Họ và tên:
+<!--    Nhập văn bản-->
+    <input type="text" name="name">
+    Mật khẩu:
+<!--    Nhập mật khẩu-->
+    <input type="password" name="password">
+    Ngày sinh:
+    <input type="date" name="bd">
+    Email:
+    <input type="email" name="email">
+    Địa chỉ:
+    <textarea></textarea>
+    Giới tính:
+    <input type="radio" name="gender" checked>Nam
+    <input type="radio" name="gender">Nữ
+    <input type="radio" name="gender">LGBT+<br>
+    Sở thích:
+    <input type="checkbox" name="hobbies">Cà Phê
+    <input type="checkbox" name="hobbies">Game
+    <input type="checkbox" name="hobbies">Bóng đá
+    <input type="checkbox" name="hobbies">Nhậu
+    <input type="checkbox" name="hobbies">Bóng rổ
+    <input type="checkbox" name="hobbies">Du lịch<br>
+    Quê quán:
+    <select>
+        <option>Huế</option>
+        <option>Quảng Nam</option>
+        <option selected>Hà Nội</option>
+        <option>Đà Nẵng</option>
+        <option>Đà Lạt</option>
+        <option>Hồ Chí Minh</option>
+    </select>
+<!-- Ctrl + space-->
+    Ẩn giấu: <input type="hidden" name="hidden">
+    <input type="submit" value="submit">
+    <input type="reset" name="reset">
+</form>
+</body>
+</html>
