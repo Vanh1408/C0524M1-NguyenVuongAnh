@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let name = prompt("Nhập vào tên");// Công --> lưu trong RAM
+    // document.write(name);
+    // khai báo biến
+    // let name;
+    // //Khởi tạo giá trị cho biến
+    // name = "Công";
+    // //cú pháp khai báo biến
+    // // keyword varName;
+    // var age = 33;
+    // const ACADEMY = "CodeGym";
+
+    // so sánh các cách khai báo biến
+    /*Lịch sử phát triển
+    * var nó ra đời từ khi js ra đời
+    * let và const ra đời từ ES6 (2015)
+    * */
+
+    // Khai báo lại cùng tên biến
+    // var có thể khai báo lại cùng tên
+    // Let thì không
+    // var name = "Công";
+    // console.log(name);
+    // var name = "Anh Hiền";
+    // console.log(name);
+
+    // sử dụng trước khai báo sau
+    // Var có thể sử dụng trước khi khai báo
+    // Let thì không
+    // Cơ chế được gọi là hoisting -> cho phép các biến được khai báo = var sẽ được đưa lên đầu phạm vi của nó
+    // console.log(name);
+    // var name = "Công";
+    // function
+
+    // Phạm vi hoạt động
+    // var là biến toàn cục, let là biến cục bộ -> HOÀN TOÀN SAI
+    // đối với let thì phạm vi hoạt động của biến nằm trên block scope
+    // {} -> block scope
+    // var phạm vi hoạt động nằm trong function scope
+    let name;
+    name = "Công";
+    name = "Anh Chánh";
+    console.log(name);
+    const PI = 3.14;
+    // TH1: nếu là kiêu dữ liệu nguyên thủy -> không cho phép thay đổi giá trị
+    // TH2: nếu là kiểu đối tượng, chỉ cho phép thay đổi bên trong đối tượng
+    // còn lại giống let
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="doSth()">Click me</button>
+<p id="result1"></p>
+<p id="result2"></p>
+<!--inline: nhúng trực tiếp mã JS vào HTML-->
+<!--<button onclick="alert('Hello các bạn')">Click me</button>-->
+
+<!--Internal: Viết mã JS trong cặp thẻ <script> dược đặt ở file HTML-->
+<!--<script>-->
+<!--    alert("Hello các bạn")-->
+<!--</script>-->
+
+<!--External: tạo 1 file js riêng và nhúng vào HTML thông qua thuộc tính src ở thẻ mở script-->
+<!--<script src="demo_js.js"></script>-->
+<script>
+    /*Các hàm hiển thị thông báo
+    * prompt(): hiển thị hộp thoại kèm với ô nhập dữ liệu
+    * alert(): hiển thị hộp thoại thông báo một thông điệp nào đó
+    * confirm(): hiển thị hộp thoại để xác nhận 1 vấn đề nào đó
+    * */
+    // alert("Hello world");
+    // prompt("Nhập tên của bạn vào đây: ");
+    // confirm("Bạn chắc chắn muốn xóa facebook");
+    // let name = prompt("Nhập tên vào đây: ");
+    // alert(name);
+
+    /*Các hàm xuất dữ liệu:
+    * console.log(): hiển thị dữ liệu ở tab console trên trang web
+    * document.write(): hiển thị lên nội dung trang web
+    * innerHTML
+    * */
+    function doSth() {
+        let name = prompt("Nhập tên vào đây: ");
+        document.getElementById("result1").innerText = name;
+        document.getElementById("result2").innerHTML = name;
+    }
+</script>
+</body>
+</html>
