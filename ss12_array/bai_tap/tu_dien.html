@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    Nhập từ muốn tìm:
+    <input type="text" id="eng" name="word">
+    <br>
+    <input type="button" onclick="trans()" name="Translate" value="Dịch">
+</form>
+<p id="Translate"></p>
+<script>
+    let eng = ["learn","go","help","school"];
+    let vn = ["học","đi","giúp đỡ","trường học"];
+    function trans() {
+        let word = document.getElementById("eng").value;
+        if (eng.indexOf(word) !== -1) {
+            let p = eng.indexOf(word);
+            document.getElementById("Translate").innerText = "Nghĩa tiếng Việt của từ này là: " + vn[p];
+        } else {
+            document.getElementById("Translate").innerText = "Không tìm thấy.";
+        }
+    }
+</script>
+</body>
+</html>
