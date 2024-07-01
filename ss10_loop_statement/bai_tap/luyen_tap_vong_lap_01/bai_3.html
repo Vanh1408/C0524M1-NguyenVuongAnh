@@ -6,7 +6,17 @@
 </head>
 <body>
 <script>
-    
+    let numbers = 20;
+    function fibonacci(n) {
+        if (n === 0 || n === 1) {
+            return n;
+        } else {
+            return (fibonacci(n - 1) + fibonacci(n - 2));
+        }
+    }
+    for (let i = 0; i < numbers; i++) {
+        document.write(fibonacci(i) + "<br>");
+    }
 </script>
 </body>
 </html>
