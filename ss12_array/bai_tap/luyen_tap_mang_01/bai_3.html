@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length = +prompt("Nhập kích thước mảng");
+    let arr = [];
+    let max = 0;
+    let average = 0;
+    for (let i = 0; i < length; i++) {
+        arr[i] = +prompt(`Nhập vào phần tử thứ ${i+1}`);
+    }
+    for (let i = 0; i < length; i++) {
+        if(max - arr[i]){
+            max = arr[i];
+        }
+        average += arr[i];
+    }
+    document.write("Giá trị lớn nhất của mảng: " + max + "<br>");
+    document.write("Giá trị trung bình của các phần tử trong mảng: " + (average/length));
+</script>
+</body>
+</html>
