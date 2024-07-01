@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = +prompt("Nhập dài của dãy fibonacci(1 = 1 số)");
+    function fibonacci(n){
+        if (n === 0 || n === 1){
+            return n;
+        }else {
+            return (fibonacci(n-1)+fibonacci(n-2));
+        }
+    }
+
+    for (let i = 0; i < numbers; i++) {
+        document.write(fibonacci(i));
+    }
+</script>
+</body>
+</html>
