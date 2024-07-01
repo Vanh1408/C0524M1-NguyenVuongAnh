@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [3,5,7,4,8,1,9,10,2,6];
+    let result = 0;
+    for (let i = 0; i < 10; i++) {
+        if(result - arr[i] < 0){
+            result = arr[i];
+        }
+    }
+    document.write("Phần tử max có giá trị là: " + result + "<br>");
+    document.write("Vị trị của phần từ: " + arr.indexOf(result));
+</script>
+</body>
+</html>
