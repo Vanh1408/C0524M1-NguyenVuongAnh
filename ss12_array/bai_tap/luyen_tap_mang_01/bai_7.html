@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = new Array(10);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt(`Nhập vào phần tử số nguyên thứ ${i+1}`);
+    }
+    document.write("Mảng ban đầu: " + arr.toString() + "<br>");
+    let V = +prompt("Nhập số nguyên V cần tìm");
+    if (arr.includes(V)) {
+        arr.splice(arr.indexOf(V),1);
+        arr.push(0);
+    } else {
+        document.write("V is not in the array<br>");
+    }
+    document.write("Mảng lúc sau: " + arr.toString());
+</script>
+</body>
+</html>
