@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    debugger;
+    function demSoTuTrongChuoi(chuoi) {
+        chuoi = chuoi.trim();
+        if (chuoi === "") {
+            return 0;
+        }
+        return chuoi.split(/\s+/).length;
+    }
+
+    let inputString = prompt("Nhập chuỗi");
+    let count = demSoTuTrongChuoi(inputString);
+    document.write("Số từ trong chuỗi là: " + count);
+</script>
+</body>
+</html>

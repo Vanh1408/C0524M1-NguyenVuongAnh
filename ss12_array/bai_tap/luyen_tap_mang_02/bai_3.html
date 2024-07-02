@@ -10,11 +10,15 @@
     let arr = [];
     let count = 0;
     for (let i = 0; i < length; i++) {
-        arr[i] = prompt(`Nhập vào phần tử thứ ${i+1}`);
-        count++;
+        arr[i] = prompt(`Nhập vào phần tử kí tự thứ ${i+1}`);
     }
-    document.write("Mảng arr: " + arr + "<br>");
-    document.write("Sô kí tự trong mảng: " + count);
+    for (let j = 0; j <= arr.length; j++) {
+        if (arr[j] === isNaN) {
+            count++;
+        }
+    }
+    let symbol = arr.length - count;
+    document.write("Số lượng ký tự số trong mảng là: " + symbol);
 </script>
 </body>
 </html>
