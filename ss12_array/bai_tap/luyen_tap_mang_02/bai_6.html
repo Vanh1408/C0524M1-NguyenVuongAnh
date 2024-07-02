@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length = +prompt("Nhập kích thước mảng");
+    let arr = [];
+    for (let i = 0; i < length; i++) {
+        arr[i] = prompt(`Nhập vào phần tử kí tự thứ ${i+1}`);
+    }
+    document.write("Mảng ban đầu: " + arr + "<br>");
+    while (arr.includes("-")){
+        if (arr.includes("-")){
+            arr.splice(arr.indexOf("-"),1,"_");
+        }else{
+            document.write("Mảng không có kí tự (-) ");
+        }
+    }
+    document.write("Mảng lúc sau: " + arr + "<br>");
+</script>
+</body>
+</html>
