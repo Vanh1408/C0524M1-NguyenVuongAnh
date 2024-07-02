@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = new Array(10);
+    for (let i = arr.length; i > 0; i--) {
+        arr[i] = +prompt(`Nhập vào ${i} phần tử số nguyên thứ `);
+    }
+    let V = +prompt("Nhập số nguyên V cần tìm");
+    if (arr.includes(V)) {
+        document.write("V is in the array");
+    } else {
+        document.write("V is not in the array");
+    }
+</script>
+</body>
+</html>
