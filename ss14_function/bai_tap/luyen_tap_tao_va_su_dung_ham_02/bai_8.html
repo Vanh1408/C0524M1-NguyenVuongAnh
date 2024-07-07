@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function reverse() {
+        let length = +prompt("Nhập kích thước mảng");
+        let arr = [];
+        let count = 0;
+        for (let i = 0; i < length; i++) {
+            arr[i] = +prompt(`Nhập vào phần tử thứ ${i+1}`);
+        }
+        alert("Mảng ban đầu: " + arr);
+        arr.reverse();
+        alert("Mảng sau khi đảo ngược: " + arr);
+    }
+    reverse();
+</script>
+</body>
+</html>
