@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Length</th>
+            <th>To Length</th>
+        </tr>
+        <tr>
+            <td><label>
+                <input type="number" id="amount">
+            </label></td>
+            <td><label>
+                <select id="from">
+                    <option value="foot" selected>Foot</option>
+                    <option value="meter">Meter</option>
+                </select>
+            </label></td>
+            <td><label>
+                <select id="to">
+                    <option value="meter" selected>Meter</option>
+                    <option value="foot">Foot</option>
+                </select>
+            </label></td>
+            <td>
+                <button type="button" onclick="convert()">Convert</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<p id="result">Result: </p>
+<script>
+    function convert() {
+        let amount = +document.getElementById("amount").value;
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        let result;
+        if (from === "foot" && to === "meter"){
+            result = 0.305 * amount;
+        }else if (from === "meter" && to === "foot"){
+            result = 3.279 * amount;
+        }else {
+            result = amount;
+        }
+        document.getElementById("result").innerText = "Result: " + result;
+    }
+</script>
+</body>
+</html>
