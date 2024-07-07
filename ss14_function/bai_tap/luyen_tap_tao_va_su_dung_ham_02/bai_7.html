@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function swapNumbers(a, b) {
+        let temp = a;
+        a = b;
+        b = temp;
+        return [a, b];
+    }
+    let x = +prompt("Nhập vào số thứ nhất");
+    let y = +prompt("Nhập vào số thứ 2");
+    alert(`Trước khi đổi chỗ: x = ${x}, y = ${y}`);
+    [x,y] = swapNumbers(x,y);
+    alert(`Sau khi đổi chỗ: x = ${x}, y = ${y}`);
+</script>
+</body>
+</html>
