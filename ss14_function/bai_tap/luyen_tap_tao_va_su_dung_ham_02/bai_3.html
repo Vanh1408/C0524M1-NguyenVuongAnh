@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = +prompt("Nhập số bất kỳ");
+    let result = 1;
+    function giaiThua() {
+        for (let i = 1; i <= num; i++) {
+            result *= i;
+        }
+        alert(`Giai thừa của ${num} là ${result}`)
+    }
+    giaiThua();
+</script>
+</body>
+</html>
