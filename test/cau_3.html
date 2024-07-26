@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length = +prompt("Input arr length: ");
+    let arr = [];
+    for (let i = 0; i < length; i++) {
+        if(i == 0){
+            arr[i] = +prompt(`Input ${i+1}st integer`);
+        }else if(i == 1){
+            arr[i] = +prompt(`Input ${i+1}nd integer`);
+        } else if (i == 2) {
+            arr[i] = +prompt(`Input ${i+1}rd integer`);
+        }else{
+            arr[i] = +prompt(`Input ${i+1}th integer`);
+        }
+    }
+    function isPrime(num) {
+        if (num <= 1) return false;
+        if (num <= 3) return true;
+        if (num % 2 === 0 || num % 3 === 0) return false;
+        for (let i = 5; i * i <= num; i += 6) {
+            if (num % i === 0 || num % (i + 2) === 0) return false;
+        }
+        return true;
+    }
+    let primes = arr.filter(isPrime);
+    primes.sort(function (m,n){
+        return m - n;
+    })
+    alert("Your arr after sort: " + primes.toString())
+</script>
+</body>
+</html>
