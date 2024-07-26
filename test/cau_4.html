@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Phone{
+        constructor(id, name, manufacturer, price) {
+            this._id = id;
+            this._name = name;
+            this._manufacturer = manufacturer;
+            this._price = price;
+        }
+
+        get id() {
+            return this._id;
+        }
+
+        get name() {
+            return this._name;
+        }
+
+        get manufacturer() {
+            return this._manufacturer;
+        }
+
+        get price() {
+            return this._price;
+        }
+
+        set id(value) {
+            this._id = value;
+        }
+
+        set name(value) {
+            this._name = value;
+        }
+
+        set manufacturer(value) {
+            this._manufacturer = value;
+        }
+
+        set price(value) {
+            this._price = value;
+        }
+
+        toString() {
+            return `ID: ${this._id}, Name: ${this._name}, Manufacturer: ${this._manufacturer}, Price: $${this._price}`;
+        }
+    }
+    let phones = [];
+    function addPhone(id,name,manufacturer,price) {
+        let phone = new Phone(id,name,manufacturer,price);
+        phones.push(phone);
+    }
+    function displayPhones() {
+        phones.sort((a, b) => a.name.localeCompare(b.name));
+        let phoneList = phones.map(phone => phone.toString()).join('\n');
+        alert('Phone List:\n' + phoneList);
+    }
+    addPhone("001","iPhone 15","Apple",2000);
+    addPhone("002","Galaxy Flip","Samsung",1800);
+    addPhone("003","Brick","Nokia",100);
+
+    displayPhones();
+</script>
+</body>
+</html>
