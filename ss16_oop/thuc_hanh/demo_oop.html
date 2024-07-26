@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /* Các cách tạo class trong JS:
+    * Cách 1: object literal - singleton class*/
+    // let obj = {name: "Công", birthday: "10/09/1991"};
+    // console.log(obj);
+    /* Cách 2: tạo class bằng cách sử dụng function -> */
+    /* Cách 3: sử dụng từ khóa class
+    * Tạo class Student có các thuộc tính
+    * Tên
+    * Ngày sinh
+    * Email*/
+    /* Biến, hàm -> camelCase
+    * class -> PascalCase: Student, Teacher, CodeGymStudent*/
+    /* Constructor - hàm khởi tạo
+    * Hàm đặc biệt sử dụng để tạo đối tượng và thường chứa các thuộc tính của đối tượng */
+    class Student {
+        // class body
+        constructor(name,birthday,email) {
+            this.name = name;
+            this.birthday = birthday;
+            this.email = email;
+        }
+        learn(subject){
+            console.log(`Học ${subject}`);
+        }
+        toString(){
+            return`Student: ${this.name}, ${this.birthday}, ${this.email}`;
+        }
+    }
+    let student = new Student("Công","10/09/1991","cong.nguyen@codegym.vn");
+    console.log(student.toString());
+    student.name = "Anh Hiền";
+    student.birthday = "1988";
+    student.email = "hien.nguyen@gmail.com";
+    console.log(student.toString());
+    // console.log(student.name);
+    // console.log(student.birthday);
+    // console.log(student.email);
+    student.learn("gì đó đi");
+</script>
+</body>
+</html>

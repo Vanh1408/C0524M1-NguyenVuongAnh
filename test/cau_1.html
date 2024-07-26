@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayLength;
+    while (true) {
+        arrayLength = prompt('Enter the length of the array (up to 20):');
+        arrayLength = parseInt(arrayLength);
+
+        if (!isNaN(arrayLength) && arrayLength > 0 && arrayLength <= 20) {
+            break;
+        } else {
+            alert('Invalid length. Please enter a number between 1 and 20.');
+        }
+    }
+    let numbers = [];
+    for (let i = 0; i < arrayLength; i++) {
+        let num;
+        while (true) {
+            num = prompt(`Enter integer ${i + 1}:`);
+            num = parseInt(num);
+            if (!isNaN(num)) {
+                numbers.push(num);
+                break;
+            } else {
+                alert('Please enter a valid integer.');
+            }
+        }
+    }
+    alert('Array: ' + numbers.join(', '));
+    let evenSum = 0;
+    let oddSum = 0;
+    let evenNumbers = [];
+    let oddNumbers = [];
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 === 0) {
+            evenSum += numbers[i];
+            evenNumbers.push(numbers[i]);
+        } else {
+            oddSum += numbers[i];
+            oddNumbers.push(numbers[i]);
+        }
+    }
+    let evenPart = '(' + evenNumbers.join('+') + ')';
+    let oddPart = '(' + oddNumbers.join('+') + ')';
+    let difference = evenSum - oddSum;
+    let resultString = `${evenPart} - ${oddPart} = ${difference}`;
+    alert('Difference (Even sum - Odd sum): ' + resultString);
+</script>
+</body>
+</html>
